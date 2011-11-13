@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-echo -e '1,1,1\n2,2,2\n3,3,3\n4,4,4' | ./streaming_regression.R
+echo -e '2,1\n4,2\n6,3\n8,4' | ./streaming_regression.R
