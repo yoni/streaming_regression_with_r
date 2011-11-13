@@ -1,0 +1,7 @@
+Streaming Regression with R
+---------------------------
+
+Runs a linear regression using streaming data from standard in.
+
+
+Utilizes biglm's update function to update a solution based on chunked rows of CSV input data. This is intended to be used for very large scale data analysis using systems like Hadoop Streaming.
