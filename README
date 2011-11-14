@@ -14,4 +14,4 @@ Build
 Install
 -------
   bin/build.sh
-  R CMD INSTALL
+  R CMD INSTALL <tarball_name>
