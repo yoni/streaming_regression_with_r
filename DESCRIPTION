@@ -1,0 +1,14 @@
+Package: StreamingLm
+Type: Package
+Title: What the package does (short line)
+Version: 1.0
+Date: 2011-11-13
+Author: Yoni Ben-Meshulam
+Maintainer: Yoni Ben-Meshulam <yoni@opower.com>
+Description: Streaming linear regression.
+License: GPL-3
+LazyLoad: yes
+Depends:
+    biglm
+Collate:
+    'StreamingLm.R'

@@ -17,11 +17,13 @@ require(biglm)
 #' @param number_of_rows_per_update the number or rows to read before running an update to the solution
 #' @param column_classes the class types for each column of the comma-separated-value rows read from the connection
 #' @param column_names the names of the columns to read. For example, one or more of the variables in the model.
-#' @example
+#' @examples
+#' require(StreamingLm)
 #' con <- pipe(description="echo '1,2\n2,4'") # y = 0 + 0.5 * x1
 #' open(con)
 #' solution <- StreamingLm(model=y~x1, file=con, number_of_rows_per_update=2, column_classes=rep('integer',2),column_names=c('y','x1'))
 #' coef(solution) # y = 0 + 0.5 * x1
+#' @export
 StreamingLm <- function (
     model,
     file,
