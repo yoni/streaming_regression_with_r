@@ -1,8 +1,6 @@
 require(biglm)
 
-#' 
 #' Streaming Regression with R
-#' ---------------------------
 #' 
 #' Reads rows od CSV-valued data from standard in and runs
 #' repeated updates to the solution of a linear model.
@@ -11,8 +9,7 @@ require(biglm)
 #' 
 #' Utilizes biglm's update function to update a solution based on chunked rows of CSV input data. 
 #' 
-#' Run the Example
-#' ---------------
+#' Running the Example:
 #'   ./example.sh
 #'
 #' @param model the linear model
@@ -20,6 +17,11 @@ require(biglm)
 #' @param number_of_rows_per_update the number or rows to read before running an update to the solution
 #' @param column_classes the class types for each column of the comma-separated-value rows read from the connection
 #' @param column_names the names of the columns to read. For example, one or more of the variables in the model.
+#' @example
+#' con <- pipe(description="echo '1,2\n2,4'") # y = 0 + 0.5 * x1
+#' open(con)
+#' solution <- StreamingLm(model=y~x1, file=con, number_of_rows_per_update=2, column_classes=rep('integer',2),column_names=c('y','x1'))
+#' coef(solution) # y = 0 + 0.5 * x1
 StreamingLm <- function (
     model,
     file,
